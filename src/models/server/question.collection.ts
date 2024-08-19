@@ -4,9 +4,9 @@ import { databases } from './config'
 
 export default async function createQuestionCollection() {
     await databases.createCollection(db, questionCollection, questionCollection, [
+        Permission.create('users'),
         Permission.read('any'),
         Permission.read('users'),
-        Permission.create('users'),
         Permission.update('users'),
         Permission.delete('users'),
     ])
