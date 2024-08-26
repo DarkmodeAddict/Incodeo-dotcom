@@ -15,3 +15,9 @@
 - Created Storage Collection and Attributes at ./src/models/server/storage.collection.ts.
 - Created Votes Collection and Attributes at ./src/models/server/votes.collection.ts.
 - Configured and created Bucket for collection on Database at ./src/models/server/dbSetup.ts.
+
+### Version 0.4
+- Zustand configuration created along with immer.
+- Middleware configuration for Appwrite storage and database at ./src/middleware.ts.
+- Auth service using Zustand and Immer done at ./src/store/Auth.ts.
+- storage.collection.ts changed to storageSetup.ts.
