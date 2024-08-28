@@ -21,3 +21,8 @@
 - Middleware configuration for Appwrite storage and database at ./src/middleware.ts.
 - Auth service using Zustand and Immer done at ./src/store/Auth.ts.
 - storage.collection.ts changed to storageSetup.ts.
+
+### Version 0.5
+- Auth Layout for Login and Registration.
+- ShadCN components added for the project.
+- Components present at ./src/components/ui and ./src/lib.
