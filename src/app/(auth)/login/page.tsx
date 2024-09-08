@@ -1,7 +1,6 @@
 'use client'
-
-import { useAuthStore } from '@/store/Auth'
 import React from 'react'
+import { useAuthStore } from '@/store/Auth'
 
 function LoginPage() {
   const {login} = useAuthStore()
