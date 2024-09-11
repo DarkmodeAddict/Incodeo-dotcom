@@ -60,12 +60,12 @@ const Answers = ({
         }
     };
 
-    const deleteAnswer = async (answerId: string) => {
+    const deleteAnswer = async (answerID: string) => {
         try {
             const response = await fetch("/api/answer", {
                 method: "DELETE",
                 body: JSON.stringify({
-                    answerId: answerId,
+                    answerID: answerID,
                 }),
             });
 
@@ -75,7 +75,7 @@ const Answers = ({
 
             setAnswers(prev => ({
                 total: prev.total - 1,
-                documents: prev.documents.filter(answer => answer.$id !== answerId),
+                documents: prev.documents.filter(answer => answer.$id !== answerID),
             }))
         } catch (error: any) {
             window.alert(error?.message || "Error deleting answer");
@@ -94,7 +94,7 @@ const Answers = ({
                             upvotes={answer.upvotesDocuments}
                             downvotes={answer.downvotesDocuments}
                         />
-                        {user?.$id === answer.authorId ? (
+                        {user?.$id === answer.authorID ? (
                             <button
                                 className="flex h-10 w-10 items-center justify-center rounded-full border border-red-500 p-1 text-red-500 duration-200 hover:bg-red-500/10"
                                 onClick={() => deleteAnswer(answer.$id)}
